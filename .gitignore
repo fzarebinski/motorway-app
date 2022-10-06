@@ -1,0 +1,14 @@
+# ide
+.idea
+*.iml
+
+# os
+*.DS_Store
+
+# yarn
+.yarn
+node_modules
+yarn-error.log
+
+# app
+.env

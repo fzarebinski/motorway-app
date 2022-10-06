@@ -1,0 +1,54 @@
+{
+	"name": "motorway-app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app/index.js",
+	"scripts": {
+		"start": "node app/index.js",
+		"start:dev": "nodemon app/index.js",
+		"db:drop": "sequelize-cli db:drop",
+		"db:seed": "sequelize-cli db:create && sequelize-cli db:seed:all",
+		"db:migrate:up": "sequelize-cli db:migrate",
+		"db:migrate:down": "sequelize-cli db:migrate:undo",
+		"db:migrate:reset": "sequelize-cli db:migrate:undo:all",
+		"db:migrate:create": "sequelize-cli migration:generate --name",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "eslint ./app",
+		"lint:fix": "eslint ./app --fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fzarebinski/motorway-app.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/fzarebinski/motorway-app/issues"
+	},
+	"homepage": "https://github.com/fzarebinski/motorway-app#readme",
+	"pre-commit": [
+		"lint"
+	],
+	"dependencies": {
+		"body-parser": "^1.20.0",
+		"cluster": "^0.7.7",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.1",
+		"express-validator": "^6.14.2",
+		"nodemon": "^2.0.20",
+		"pg": "^8.8.0",
+		"sequelize": "^6.24.0",
+		"validator": "^13.7.0"
+	},
+	"devDependencies": {
+		"eslint": "^8.24.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-plugin-import": "^2.26.0",
+		"pre-commit": "^1.2.2",
+		"sequelize-cli": "^6.5.1"
+	},
+	"engines": {
+		"node": ">=16.13.0 <=16.17.1"
+	},
+	"packageManager": "yarn@3.2.3"
+}
