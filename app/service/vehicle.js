@@ -2,6 +2,7 @@ const {Op} = require('sequelize');
 
 const {StateLog} = require('../model');
 const {response, ErrorType} = require('../util/response');
+const {logger} = require('../util/logger');
 
 const fetchStateLog = async (id, timestamp) => {
 	try {
@@ -23,7 +24,7 @@ const fetchStateLog = async (id, timestamp) => {
 
 		return response(true, stateLog);
 	} catch (e) {
-		console.error(e);
+		logger.error(e);
 
 		return response(false, ErrorType.INTERNAL_ERROR);
 	}

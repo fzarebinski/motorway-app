@@ -2,10 +2,14 @@ require('dotenv').config();
 const Sequelize = require('sequelize');
 
 const {production: config} = require('../../db/config');
+const {log} = require('../util/logger');
 
 const db = {};
 
-const sequelize = new Sequelize(config);
+const sequelize = new Sequelize({
+	...config,
+	logging: log
+});
 
 // Sequelize
 

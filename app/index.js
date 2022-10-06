@@ -4,6 +4,7 @@ const express = require('express');
 const os = require('os');
 
 const loader = require('./loader');
+const logger = require('./util/logger');
 
 const start = async () => {
 	const {NODE_ENV} = process.env;
@@ -11,19 +12,19 @@ const start = async () => {
 	if (cluster.isMaster && NODE_ENV === 'production') {
 		const workers = os.cpus().length;
 
-		console.log(`Preparing  ${workers} workers...`);
+		logger.log(`Preparing  ${workers} workers...`);
 
 		for (let i = 0; i < workers; i += 1) {
 			cluster.fork();
 		}
 
 		cluster.on('online', (worker) => {
-			console.log(`Worker ${worker.process.pid} is online`);
+			logger.log(`Worker ${worker.process.pid} is online`);
 		});
 
 		cluster.on('exit', (worker, code, signal) => {
-			console.error(`Worker ${worker.process.pid} died with code ${code} and signal ${signal}`);
-			console.log('Starting a new worker');
+			logger.error(`Worker ${worker.process.pid} died with code ${code} and signal ${signal}`);
+			logger.log('Starting a new worker');
 			cluster.fork();
 		});
 	} else {
@@ -32,12 +33,12 @@ const start = async () => {
 
 		app.listen(process.env.PORT, (err) => {
 			if (err) {
-				console.log('Server running failed...');
-				console.error(err); // eslint-disable-line
+				logger.log('Server running failed...');
+				logger.error(err);
 				return;
 			}
 
-			console.log(`Server is listening on port ${process.env.PORT}`); // eslint-disable-line
+			logger.log(`Server is listening on port ${process.env.PORT}`);
 		});
 	}
 };
