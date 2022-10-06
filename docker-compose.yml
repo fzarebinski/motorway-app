@@ -1,0 +1,17 @@
+services:
+  app:
+    image: motorway-app
+    container_name: motorway-app
+    build:
+      context: .
+      target: motorway-app
+    environment:
+      - NODE_ENV=development
+      - PORT=80
+      - DEBUG=app:*
+      - DB_HOST=localhost
+      - DB_USER=user
+      - DB_PASSWORD=password
+      - DB_NAME=motorway
+    ports:
+      - 80:80
