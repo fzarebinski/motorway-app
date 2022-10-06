@@ -12,7 +12,7 @@ Motorway App requires:
 ## Setup
 
 To setup the project you need to:
-* install a supported Node and Yarn version (check requirements),
+* install supported versions of Node and Yarn (check requirements),
 * run `yarn` to install dependencies,
 * copy `.env.sample` file and save it as a `.env` file,
 * fill the `.env` file with your local configuration,
