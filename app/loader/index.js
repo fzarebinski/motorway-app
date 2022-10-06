@@ -1,7 +1,7 @@
 const sequelize = require('./sequelize');
 const express = require('./express');
 
-module.exports = async (app) => {
-	await sequelize();
+module.exports = (app) => {
+	sequelize();
 	express(app);
 };

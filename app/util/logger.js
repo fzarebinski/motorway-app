@@ -5,7 +5,7 @@ const warning = debug('app:warning');
 const error = debug('app:error');
 
 module.exports = {
-	log: (message) => log('%o', message),
-	warning: (message) => warning('%o', message),
-	error: (message) => error('%o', message)
+	log: (message) => log('%O', message),
+	warning: (message) => warning('%O', message),
+	error: (message) => error('%O', message)
 };

@@ -12,7 +12,7 @@
 		"db:migrate:down": "sequelize-cli db:migrate:undo",
 		"db:migrate:reset": "sequelize-cli db:migrate:undo:all",
 		"db:migrate:create": "sequelize-cli migration:generate --name",
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "mocha --recursive",
 		"lint": "eslint ./app",
 		"lint:fix": "eslint ./app --fix"
 	},
@@ -42,9 +42,12 @@
 		"validator": "^13.7.0"
 	},
 	"devDependencies": {
+		"chai": "^4.3.6",
+		"chai-http": "^4.3.0",
 		"eslint": "^8.24.0",
 		"eslint-config-airbnb-base": "^15.0.0",
 		"eslint-plugin-import": "^2.26.0",
+		"mocha": "^10.0.0",
 		"pre-commit": "^1.2.2",
 		"sequelize-cli": "^6.5.1"
 	},

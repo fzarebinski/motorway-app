@@ -6,9 +6,10 @@ const os = require('os');
 const loader = require('./loader');
 const logger = require('./util/logger');
 
-const start = async () => {
-	const {NODE_ENV} = process.env;
+const app = express();
+const {NODE_ENV} = process.env;
 
+const start = () => {
 	if (cluster.isMaster && NODE_ENV === 'production') {
 		const workers = os.cpus().length;
 
@@ -28,8 +29,7 @@ const start = async () => {
 			cluster.fork();
 		});
 	} else {
-		const app = express();
-		await loader(app);
+		loader(app);
 
 		app.listen(process.env.PORT, (err) => {
 			if (err) {
@@ -44,3 +44,5 @@ const start = async () => {
 };
 
 start();
+
+module.exports = app;
