@@ -7,7 +7,7 @@ Motorway App is a tech challenge provided by Motorway Online Ltd.
 Motorway App requires:
 * PostgreSQL database run through Docker using provided starter package,
 * Node v16.13.0 - 16.17.1,
-* Yarn 3.2.4.
+* Yarn v3.0.0 - 3.2.4.
 
 ## Setup
 
