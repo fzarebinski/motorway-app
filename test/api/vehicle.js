@@ -129,7 +129,7 @@ describe('API: Vehicle', () => {
 	});
 
 	describe('Endpoint: /vehicle/:id/state/:timestamp', () => {
-		it('Fetch state with removed ID', (done) => {
+		it('Fetch state with removed/not-existing ID', (done) => {
 			const testedTimestamp = '2022-10-06 14:00:00+01';
 
 			chai.request(app)

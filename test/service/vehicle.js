@@ -107,7 +107,7 @@ describe('Service: Vehicle', () => {
 	});
 
 	describe('Method: fetchStateLog', () => {
-		it('Fetch state with removed ID',  async () => {
+		it('Fetch state with removed/not-existing ID',  async () => {
 			const testedTimestamp = '2022-10-06 14:00:00+01';
 
 			const response = await vehicleService.fetchStateLog(vehicle.id, testedTimestamp);
