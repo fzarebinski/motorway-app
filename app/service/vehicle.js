@@ -2,7 +2,7 @@ const {Op} = require('sequelize');
 
 const {StateLog} = require('../model');
 const {response, ErrorType} = require('../util/response');
-const {logger} = require('../util/logger');
+const logger = require('../util/logger');
 
 const fetchStateLog = async (id, timestamp) => {
 	try {
@@ -10,7 +10,7 @@ const fetchStateLog = async (id, timestamp) => {
 			where: {
 				vehicleId: id,
 				timestamp: {
-					[Op.lt]: timestamp
+					[Op.lte]: timestamp
 				}
 			},
 			order: [
