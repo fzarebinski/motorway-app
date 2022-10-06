@@ -5,18 +5,18 @@ Motorway App is a tech challenge provided by Motorway Online Ltd.
 ## Requirements
 
 Motorway App requires:
-* PostgreSQL database run through Docker using provided starter package,
+* PostgreSQL running through Docker using provided starter package,
 * Node v16.13.0 - 16.17.1,
 * Yarn v3.0.0 - 3.2.4.
 
 ## Setup
 
 To setup the project you need to:
-* install a supported Node version (check requirements),
+* install a supported Node and Yarn version (check requirements),
 * run `yarn` to install dependencies,
 * copy `.env.sample` file and save it as a `.env` file,
 * fill the `.env` file with your local configuration,
-* run `npm run start:dev` to start local development server.
+* run `yarn start:dev` to start local development server.
 
 ## Scripts
 
@@ -44,7 +44,7 @@ Before first contribution, please remember about:
 * `.gitignore` - list there all custom files related to your IDE,
 * `.editorconfig` - installation of EditorConfig plugin in your IDE to follow code formatting standing for the project.
 
-The project is configured to run linter before committing to force code standards.
+The project is configured to run linter before committing to force coding standards.
 
 ## Structure
 
