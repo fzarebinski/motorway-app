@@ -25,6 +25,7 @@ Alternatively, you can run a docker container using docker compose `docker compo
 Environment parameters available in the `.env` file:
 * `NODE_ENV` - node environment (`production|development|test`),
 * `PORT` - server port,
+* `DEBUG` - logger configuration,
 * `DB_HOST` - database server host,
 * `DB_USER` - database server username,
 * `DB_PASSWORD` - database server password,
