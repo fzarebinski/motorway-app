@@ -11,7 +11,7 @@ Motorway App requires:
 
 ## Setup
 
-To set up the project you need to:
+In order to set up the project you need to:
 * install supported versions of Node and Yarn (check requirements),
 * run `yarn` to install dependencies,
 * copy `.env.sample` file and save it as a `.env` file,
@@ -56,11 +56,11 @@ Before first contribution, please remember about:
 * `.gitignore` - list there all custom files related to your IDE,
 * `.editorconfig` - installation of the EditorConfig plugin in your IDE to follow code formatting standing for the project.
 
-The project is configured to run linter before committing to force coding standards.
+The project is configured to run linter before committing in order to force coding standards.
 
 ## Structure
 
-The app is structured in this way:
+The app is structured in the following way:
 * `app` - app directory:
 	* `api` - api endpoints/routing,
 	* `loader` - app dependency and loader,
@@ -84,6 +84,6 @@ The app is structured in this way:
 * `.npmrc` - npm configuration,
 * `.sequelizerc` - sequelize configuration,
 * `.yarnrc.yml` - Yarn configuration,
-* `package.json` - Project configuration,
+* `package.json` - project configuration,
 * `yarn.lock` - Yarn lock file,
 * `README.md` - readme.
