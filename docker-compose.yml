@@ -7,11 +7,11 @@ services:
       target: motorway-app
     environment:
       - NODE_ENV=development
-      - PORT=80
+      - PORT=3000
       - DEBUG=app:*
       - DB_HOST=localhost
       - DB_USER=user
       - DB_PASSWORD=password
       - DB_NAME=motorway
     ports:
-      - 80:80
+      - 3000:3000

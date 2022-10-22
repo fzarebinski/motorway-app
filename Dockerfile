@@ -1,4 +1,4 @@
-FROM node:lts-gallium as motorway-app
+FROM node:lts-gallium AS motorway-app
 
 # Working directory
 WORKDIR /usr/src/app
@@ -8,9 +8,6 @@ COPY . .
 
 # Setup dependencies
 RUN yarn
-
-# Expose ports
-EXPOSE 80
 
 # Start the container
 CMD [ "yarn", "start" ]
