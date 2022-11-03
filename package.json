@@ -49,9 +49,9 @@
 		"sequelize-cli": "^6.5.1"
 	},
 	"engines": {
-		"node": ">=16.13.0 <=16.17.1",
+		"node": ">=16.13.0 <=16.18.0",
 		"npm": "please-use-yarn",
-		"yarn": ">=3.0"
+		"yarn": ">=3.0 <=3.2.4"
 	},
 	"engineStrict": true,
 	"packageManager": "yarn@3.2.4"
