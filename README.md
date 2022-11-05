@@ -80,6 +80,7 @@ The app is structured in the following way:
 	* `api` - endpoints tests,
 	* `service` - services tests,
 	* `util` - utils tests,
+* `node_modules` - auto-generated node directory,
 * `.editorconfig` - editorconfig configuration,
 * `.env|.env.sample` - project configuration,
 * `.eslintrc.json` - eslint configuration,
