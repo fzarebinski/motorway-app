@@ -62,6 +62,9 @@ The project is configured to run linter before committing in order to force codi
 ## Structure
 
 The app is structured in the following way:
+* `.yarn` - yarn zero-install directory:
+	* `plugins` - yarn plugins,
+    * `releases` - yarn executables,
 * `app` - app directory:
 	* `api` - api endpoints/routing,
 	* `loader` - app dependency and loader,
@@ -77,7 +80,6 @@ The app is structured in the following way:
 	* `api` - endpoints tests,
 	* `service` - services tests,
 	* `util` - utils tests,
-* `node_modules` - auto-generated node directory,
 * `.editorconfig` - editorconfig configuration,
 * `.env|.env.sample` - project configuration,
 * `.eslintrc.json` - eslint configuration,
