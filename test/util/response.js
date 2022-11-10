@@ -2,7 +2,7 @@ process.env.NODE_ENV = 'test';
 
 const chai = require('chai');
 
-const {response, ErrorCode} = require("../../app/util/response");
+const {response, ErrorCode} = require('../../app/util/response');
 
 describe('Util: Response', () => {
 	describe('Method: response', () => {
@@ -39,7 +39,7 @@ describe('Util: Response', () => {
 		it('Error code equals number', () => {
 			Object.values(ErrorCode).forEach((code) => {
 				chai.assert.isNumber(code);
-			})
+			});
 		});
 	});
 });

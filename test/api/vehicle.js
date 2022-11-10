@@ -122,7 +122,7 @@ describe('API: Vehicle', () => {
 				where: {
 					vehicleId: vehicle.id
 				}
-			})
+			});
 
 			await vehicle.destroy();
 		});

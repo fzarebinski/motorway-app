@@ -4,7 +4,7 @@ const chai = require('chai');
 
 const {Vehicle, StateLog} = require('../../app/model');
 const vehicleService = require('../../app/service/vehicle');
-const {ErrorType} = require("../../app/util/response");
+const {ErrorType} = require('../../app/util/response');
 
 describe('Service: Vehicle', () => {
 	let vehicle = null;
@@ -100,14 +100,14 @@ describe('Service: Vehicle', () => {
 				where: {
 					vehicleId: vehicle.id
 				}
-			})
+			});
 
 			await vehicle.destroy();
 		});
 	});
 
 	describe('Method: fetchStateLog', () => {
-		it('Fetch state with removed/not-existing ID',  async () => {
+		it('Fetch state with removed/not-existing ID', async () => {
 			const testedTimestamp = '2022-10-06 14:00:00+01';
 
 			const response = await vehicleService.fetchStateLog(vehicle.id, testedTimestamp);

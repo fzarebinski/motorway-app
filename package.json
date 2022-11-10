@@ -13,8 +13,8 @@
 		"db:migrate:reset": "sequelize-cli db:migrate:undo:all",
 		"db:migrate:create": "sequelize-cli migration:generate --name",
 		"test": "mocha --recursive",
-		"lint": "eslint ./app",
-		"lint:fix": "eslint ./app --fix"
+		"lint": "eslint ./app && eslint ./test",
+		"lint:fix": "eslint ./app --fix && eslint ./test --fix"
 	},
 	"repository": {
 		"type": "git",
